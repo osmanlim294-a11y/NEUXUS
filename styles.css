@@ -1,0 +1,415 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, Arial, sans-serif;
+  background: #0b1220;
+  color: #e2e8f0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top, #111827 0%, #080b14 100%);
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page-shell,
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.auth-panel {
+  margin: auto;
+  width: min(480px, calc(100vw - 32px));
+  padding: 32px;
+  background: rgba(15, 23, 41, 0.94);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 28px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.28);
+}
+
+.auth-panel h1 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+
+.auth-panel p {
+  margin: 0 0 24px;
+  color: #94a3b8;
+}
+
+.auth-form {
+  display: grid;
+  gap: 16px;
+}
+
+.auth-form label {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 16px;
+  background: #22c55e;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.auth-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-switch span {
+  color: #94a3b8;
+}
+
+.auth-switch button {
+  padding: 10px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: transparent;
+  color: #e2e8f0;
+}
+
+.error {
+  color: #fb7185;
+}
+
+.app-shell {
+  width: 100%;
+}
+
+.sidebar {
+  width: 320px;
+  min-width: 320px;
+  background: rgba(15, 23, 41, 0.96);
+  border-right: 1px solid rgba(148, 163, 184, 0.08);
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 18px;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.app-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.icon-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  background: rgba(30, 41, 59, 0.95);
+  color: #e2e8f0;
+}
+
+.quick-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.quick-tabs button {
+  border: none;
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(30, 41, 59, 0.94);
+  color: #cbd5e1;
+}
+
+.quick-tabs button.active {
+  background: #1d4ed8;
+  color: white;
+}
+
+.search-row input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: #111827;
+  color: #e2e8f0;
+}
+
+.friend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  overflow: auto;
+}
+
+.section-header {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.friend-item {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+  background: rgba(30, 41, 59, 0.95);
+  padding: 14px;
+  color: #e2e8f0;
+  text-align: left;
+}
+
+.friend-item.selected {
+  border: 1px solid #22c55e;
+}
+
+.friend-name {
+  font-weight: 700;
+}
+
+.friend-subtitle {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.secondary-button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 16px;
+  border: none;
+  background: #1d4ed8;
+  color: white;
+}
+
+.main-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(15, 23, 41, 0.94);
+  border: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.topbar h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.topbar div:last-child {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: rgba(15, 23, 41, 0.92);
+  border-radius: 24px;
+  padding: 22px;
+  border: 1px solid rgba(148, 163, 184, 0.08);
+}
+
+.call-panel {
+  border-radius: 24px;
+  background: rgba(30, 41, 59, 0.95);
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.call-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.call-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.call-error {
+  color: #fb7185;
+  padding: 12px 16px;
+  background: rgba(248, 113, 113, 0.12);
+  border-radius: 16px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.video-box {
+  width: 100%;
+  min-height: 240px;
+  background: #050816;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-status {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.message-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: auto;
+  padding-right: 6px;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(30, 41, 59, 0.98);
+}
+
+.message-bubble.sent {
+  margin-left: auto;
+  background: #164e63;
+}
+
+.message-bubble.received {
+  margin-right: auto;
+}
+
+.message-meta {
+  margin-top: 8px;
+  display: flex;
+  gap: 10px;
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.composer {
+  display: flex;
+  gap: 12px;
+}
+
+.composer input {
+  flex: 1;
+  padding: 14px 16px;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: #0f1729;
+  color: #e2e8f0;
+}
+
+.primary-button {
+  padding: 14px 22px;
+  border-radius: 18px;
+  border: none;
+  background: #22c55e;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.empty-chat,
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 240px;
+  color: #94a3b8;
+}
+
+.logout-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  border: none;
+  border-radius: 18px;
+  padding: 14px 18px;
+  background: #ef4444;
+  color: white;
+  box-shadow: 0 18px 40px rgba(239, 68, 68, 0.18);
+}
+
+.phone-picker {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.phone-picker input {
+  width: 100%;
+}
+
+.phone-picker button {
+  min-width: 100px;
+  border: none;
+  border-radius: 14px;
+  background: #2563eb;
+  color: white;
+}
